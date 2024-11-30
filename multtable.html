@@ -1,0 +1,61 @@
+<!--
+File: multtable.html
+GUI Assignment: HW4 Using the jQuery Plugin/UI with Your Dynamic Table
+Part 1: Validation Plugin
+Julian Tran, UMass Lowell Computer Science, Julian_Tran@student.uml.edu
+Copyright (c) 2024 by Julian. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+Created on November 25, 2024
+
+This html file structures the webpage that allows the user to input the 
+number ranges of the multiplication table that is to be generated. It uses 
+a form to create input data fields for the user to type in the desired 
+numbers for the row and column ranges, labels for the specified inputs 
+and a submission button. The script tag is used to include the jQuery
+library from CDN, include the jQuery Validate plugin, and import 
+an external javascript file at the bottom of the body element.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Multiplication Table Generator</title>
+    <meta charset="UTF-8">
+    <link href="multtable.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Multiplication Table Generator</h1>
+
+    <h3>Please enter the table ranges</h3>
+    <form id="numberForm">
+        <div class="form-group">
+            <label for="colMin">Minimum Column Value: </label>
+            <input type="text" id="colMin" name="colMin"><br><br>
+        </div>
+
+        <div class="form-group">
+            <label for="colMax">Maximum Column Value: </label>
+            <input type="text" id="colMax" name="colMax"><br><br>
+        </div> 
+
+        <div class="form-group">
+            <label for="rowMin">Minimum Row Value: </label>
+            <input type="text" id="rowMin" name="rowMin"><br><br>
+        </div>
+
+        <div class="form-group">
+            <label for="rowMax">Maximum Row Value: </label>
+            <input type="text" id="rowMax" name="rowMax"><br><br>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="tableContainer"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="multtable.js"></script>
+</body>
+</html>
